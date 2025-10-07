@@ -17,6 +17,9 @@
 - Basculin Red/Blue
 - Basculin White
 - Basculegion Female/Male
+- Galarian Slowpoke
+- Galarian Slowbro
+- Galarian Slowking
 
 # Changes to Pokemon & Abilities
 
@@ -55,9 +58,12 @@
 - Rework Spiritomb: Now Rock/Ghost/Amorphous, range 1. New ability: Soul trap ; New passive: for each Odd Keystone you have, every time a Pokémon is KO, a wisp spawns and move to Spiritomb to give it 10 Shield
 - Deerling line has now 4 seasonal forms (Spring, Summer, Autumn, Winter) that change appearance and type based on the current season (in Northern Hemisphere)
 - Change Wood Hammer: Recoil no longer scales on AP
+- Change Slowpoke/Slowbro/Slowking: now additional with split evolution method base on dominant water/psychic synergy.
 
 # Changes to Synergies
 
+- Buff Ground 8: +5 → +8 Attack when your half of the board is fully dug
+- Artificial items that can be found buried in the ground are now limited to: Toxic Orb, Hard Stone, Metal Coat, Explorer Kit, Rotom Phone, Silk Scarf, Tiny Mushroom, Incense, Electirizer, Magmarizer, Max Elixir and Exp Share.
 - Psychic 6 QoL: Unown shops now always offer 5 different types of Unown
 
 # Changes to Items
@@ -74,6 +80,7 @@
 # UI
 
 - Gems icons have been reworked to be more clear about their synergy. Thanks to Nitpicky
+- Ground fully dug holes in a row are now displayed as trenches instead of individual holes
 - Added a new keybinding to lock/unlock camera movement (default: L)
 - Added new keybindings to cycle through players' boards (default: PAGEUP/PAGEDOWN/HOME)
 - Added current amount of Dragon stars in dragon synergy description
@@ -111,6 +118,8 @@
 - Fix Swagger description showing 3 seconds of confusion instead of 2
 - Fix many typos and grammatical errors, including the names of jukebox music
 - Fix "Gotta Catch 'em All" wanderers getting stuck when caught with a full bench
+- Fix Petal Blizzard still dealing damage based on attack range
+- Fix Swallow heal never triggering
 
 Special thanks to salamander for reporting and working on many of these fixes! 
 

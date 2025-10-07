@@ -636,6 +636,11 @@ export const AbilitiesAnimations: {
     ability: Ability.POWER_WHIP,
     tint: 0xff80ff
   }),
+  [Ability.YAWN]: onCasterScale2,
+  [Ability.WISE_YAWN]: projectile({
+    scale: 2,
+    ability: Ability.YAWN
+  }),
   [Ability.MEDITATE]: onCasterScale2,
   [Ability.MUD_BUBBLE]: onCasterScale2,
   [Ability.SOFT_BOILED]: onCasterScale2,
@@ -1298,7 +1303,7 @@ export const AbilitiesAnimations: {
       const hole = args.delay ?? 0
       if (hole > 0) {
         const groundHole = args.scene.add
-          .sprite(x, y + 10, "abilities", `GROUND_HOLE/00${hole - 1}.png`)
+          .sprite(x, y + 10, "ground_holes", `hole${hole}.png`)
           .setScale(2)
           .setDepth(DEPTH.BOARD_EFFECT_GROUND_LEVEL)
         args.scene.abilitiesVfxGroup?.add(groundHole)
@@ -1372,7 +1377,7 @@ export const AbilitiesAnimations: {
     projectile({
       startCoords: [0, args.targetY],
       endCoords: [8, args.targetY],
-      scale: 4,
+      scale: 3,
       duration: 1000
     })(args),
   ["SCALE_SHOT_CHARGE"]: (args) =>
@@ -1842,6 +1847,11 @@ export const AbilitiesAnimations: {
   [Ability.HIDDEN_POWER_QM]: hiddenPowerAnimation,
   [Ability.HIDDEN_POWER_EM]: hiddenPowerAnimation,
   [Ability.ICY_WIND]: orientedProjectile({ duration: 2000 }),
+  [Ability.EERIE_SPELL]: projectile({
+    duration: 400,
+    ability: Ability.FISSURE,
+    tint: 0xff00bf
+  }),
   [Ability.HURRICANE]: orientedProjectile({ duration: 1000, distance: 4 }),
   [Ability.DRILL_RUN]: orientedProjectile({
     ability: Ability.HURRICANE,
@@ -2167,6 +2177,12 @@ export const AbilitiesAnimations: {
       tweenProps: { angle: 270 }
     })(args)
   },
+
+  [Ability.SHELL_SIDE_ARM]: projectile({
+    duration: 400,
+    ability: Ability.FISSURE,
+    tint: 0xff00bf
+  }),
 
   ["ZYGARDE_CELL"]: (args) => {
     let orientation = getOrientation(
